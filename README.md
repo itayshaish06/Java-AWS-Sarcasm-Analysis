@@ -20,6 +20,9 @@ The Assignment analyze the sarcasm in a given text.
 9. The application downloads the file from the s3 bucket, creating html file with the results.
 10. The application terminate the manager and the workers if the user chose to do so.
 
+    ![image](https://github.com/user-attachments/assets/40ce211d-beed-4fb6-9ecf-ddfad1931f93)
+
+
 ## Running the Project
 
 1. On:
@@ -27,8 +30,22 @@ The Assignment analyze the sarcasm in a given text.
    * Linux `->` run `Terminal` anf run `runMeLinux.sh` file. To clean `->` run `./cleanLinux.sh`.
 2. Make sure you save your AWS credentials in the `credentials` file.
 3. Run the `Local` jar by entering `jars` directory and running the following command:
-    * With Terminate: `java -jar Local.jar inputs/input1.txt inputs/input2.txt inputs/input3.txt inputs/input4.txt inputs/input5.txt out <number of reviews per worker> -t`
-    * Without Terminate: `java -jar Local.jar inputs/input1.txt inputs/input2.txt inputs/input3.txt inputs/input4.txt inputs/input5.txt out <number of reviews per worker>`
+    * With Terminate:
+   ```bash
+   java -jar Local.jar inputs/input1.txt inputs/input2.txt inputs/input3.txt inputs/input4.txt inputs/input5.txt out <number of reviews per worker> -t
+   ```
+   For example:
+   ```bash
+   java -jar Local.jar inputs/input1.txt inputs/input2.txt inputs/input3.txt inputs/input4.txt inputs/input5.txt out 320 -t
+   ```
+   * Without Terminate:
+   ```bash
+   java -jar Local.jar inputs/input1.txt inputs/input2.txt inputs/input3.txt inputs/input4.txt inputs/input5.txt out <number of reviews per worker>
+   ```
+   For example:
+   ```bash
+   java -jar Local.jar inputs/input1.txt inputs/input2.txt inputs/input3.txt inputs/input4.txt inputs/input5.txt out 320
+   ```
 
 ## Scalability
 * Maintaining locals in parallel:
