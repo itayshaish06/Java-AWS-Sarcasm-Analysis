@@ -30,13 +30,6 @@ The Assignment analyze the sarcasm in a given text.
     * With Terminate: `java -jar Local.jar inputs/input1.txt inputs/input2.txt inputs/input3.txt inputs/input4.txt inputs/input5.txt out <number of reviews per worker> -t`
     * Without Terminate: `java -jar Local.jar inputs/input1.txt inputs/input2.txt inputs/input3.txt inputs/input4.txt inputs/input5.txt out <number of reviews per worker>`
 
-
-## Frontal Checking.
-* AMI: `ami-00e95a9222311e8ed` (The one Gal sent)
-* Instance type: `c5.large`
-* The n we choose was `320` -> Number of instances on our Test: `7`
-* Total time: `18 minutes`
-
 ## Scalability
 * Maintaining locals in parallel:
   * Each Local sends its request to the manager SQS, and opens a new SQS for the results.
